@@ -1,0 +1,74 @@
+/*!!
+*
+/*!!CONTAINS CSS FOR PAGES
+*
+/*!!*/
+
+.modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    background-color:pink;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.modal-content button{
+    margin-left: 8px;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.nb{
+    background-color: rgba(250, 128, 114, 0.5);
+}
+ .fp{
+    background-color:pink;
+    text-align: center;
+    margin-bottom: 500px;
+    border-radius: 5px; 
+    height: 250px;
+    width:500px;
+    padding:20px;
+}
+ 
+.rp{
+    background-color:pink;
+    text-align: center;
+    margin-bottom: 500px;
+    border-radius: 5px; 
+    height: 210px;
+    width:500px;
+    padding:20px;
+}
+.about-cont {
+    max-height: calc(100vh - 60px - 80px); 
+    overflow-y: auto;
+    padding-top: 60px; 
+    padding-bottom: 80px; 
+  }
+  .about-cont::-webkit-scrollbar-thumb{
+    background-color: transparent;
+  }
+  .about-cont::-webkit-scrollbar{
+    width: 0.5em;
+  }
+  
+  

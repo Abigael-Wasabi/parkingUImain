@@ -1,0 +1,63 @@
+/*
+*
+CONTAINS CSS FOR SIGN UP FORM
+*
+*/
+
+
+
+.SignUpForm{
+    margin: 0 auto;
+    width: 400px;
+    height: 700px;
+    color: rgb(0, 0, 0);
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px burlywood;
+    background-color: pink;
+  }
+  
+  input{ 
+    width: 100%;
+    height: 40px;
+    margin-bottom: 5px;
+    background-color: transparent; 
+  }
+  
+  input::placeholder {
+    color: var(--placeholder-color, inherit);
+  }
+  
+  .SignUpForm button{
+    margin-left: 100px;
+    margin-bottom: 5px;
+  }
+  
+  p{
+    text-align: center;
+  }
+  a{
+    text-decoration: none;
+    color: black;
+  }
+  
+  .password-input {
+    position: relative;
+    width: 100%;
+  }
+  
+  .password-input input {
+    width: calc(100% - 30px);
+    height: 40px;
+    margin-bottom: 5px;
+    background-color: transparent;
+    padding-right: 30px;
+  }
+  
+  .password-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+  } 

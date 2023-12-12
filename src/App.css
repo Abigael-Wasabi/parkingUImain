@@ -1,0 +1,100 @@
+/* .App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+
+
+
+/*
+*
+CONTAINS CSS FOR PAGES
+*
+*/
+
+
+
+.app-background {
+  background-image: url('/src/assets/ppark.webp');
+  background-size: cover;
+  background-repeat: no-repeat; /*aspect ratio*/
+  min-height: 100vh;
+  background-position: center center; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color:black;
+  /* max-width: 100%; */
+  /* background-size: contain; */
+  /* border-radius: 50px; */
+  /* margin: 0 auto; */
+}
+
+.booking, .parking, .request-ride {
+  padding: 20px;
+  border: 1px solid salmon;
+  box-shadow: 2px 2px 4px burlywood;
+  height: 100px;
+  margin-bottom:30px;
+  background-color: gray;
+}
+
+.booking{
+  background-color:#CEA492; 
+} 
+
+.parking{
+  background-color: #76615A;
+}
+
+.request-ride{
+  background-color: #9F9490;
+}
+
+.pop-up {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.pop-up:hover {
+  transform: scale(1.1);
+}
+
+.footer {
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}

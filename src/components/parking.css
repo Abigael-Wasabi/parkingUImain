@@ -1,0 +1,33 @@
+.paking{
+    padding:20px;
+    border: 1px solid #ccc;
+    border-radius:5%;
+    box-shadow: 2px 2px 2px burlywood;
+    height: 600px;
+    width: 600px;
+    background-color:pink;
+  } 
+  input{
+    width: 100%;
+    height: 40px;
+    border: 1px solid salmon;
+    border-radius: 40px;
+    background-color: transparent;               
+  }
+  select{
+     width: 100%; 
+    height: 40px;
+    border: 1px solid salmon;
+    border-radius: 40px;
+    background-color: transparent;
+  }
+  
+  button{
+    width:200px;
+    height: 40px;
+    border: 1px solid salmon;
+    border-radius: 40px;
+    background-color: transparent;
+    margin-left: 200px;
+    margin-top: 20px;
+  }
