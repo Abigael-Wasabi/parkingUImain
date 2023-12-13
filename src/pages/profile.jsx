@@ -187,13 +187,11 @@
 
 import React, { useState,useEffect} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 import { useNavigate} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Cookies from 'js-cookie';
 import { jwtDecode } from 'jwt-decode';
 import axios from 'axios';
-// import API_URL from '../config/port';
 import './pages.css';
 
 function Profile({showModal, closeModal}) {
@@ -262,7 +260,7 @@ useEffect(() => {
 const handleEditProfile = async () => {
   try {
     // const storedTokenKey = localStorage.getItem('yourStoredTokenKey');
-    const response = await axios.put(`http://localhost:5000/user/editProfile/${userID}`, {
+    const response = await axios.patch(`http://localhost:5000/user/editProfile/${userID}`, {
       firstname,lastname,email,password,session,},
       {
         headers: {
@@ -289,7 +287,7 @@ const handleEditProfile = async () => {
       const response = await axios.delete('http://localhost:5000/user/logout');
       localStorage.removeItem('userID');
       console.log(response.data);
-      navigate('/');
+      navigate("/");
     } catch (err) {
       console.log(err.message);
     }
@@ -317,12 +315,14 @@ const handleEditProfile = async () => {
               <label htmlFor="session">Session</label>
               <input type="text" id="session" value={session} onChange={handleSessionChange}/><br/>
  
-              <button style={{marginLeft:'10px', width:'100px'}} type="button"
+              <button style={{marginLeft:'1px', width:'70px'}} type="button"
               onClick={handleEditProfile}>Edit</button>
-              <button style={{marginLeft:'10px', width:'100px'}} type="button"
+              <button style={{marginLeft:'10px', width:'190px', height:'70px'}} type="button"
               onClick={handleReservationCancelling}>Cancel Reservation</button>
-              <button style={{ width:'100px'}} type="button"
+              <Link to="/">
+              <button style={{marginLeft:'10px',width:'70px'}} type="button"
               onClick={handleLogout}>Logout</button>
+              </Link>
             </form>
           </div>
         </div>
