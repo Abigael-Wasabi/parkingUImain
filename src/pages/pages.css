@@ -4,6 +4,15 @@
 *
 /*!!*/
 
+.message-container {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 100%;
+  }
+
 .modal {
     display: flex;
     align-items: center;
@@ -70,5 +79,3 @@
   .about-cont::-webkit-scrollbar{
     width: 0.5em;
   }
-  
-  

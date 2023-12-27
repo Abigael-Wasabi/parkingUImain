@@ -47,10 +47,10 @@ const AdminSign = ({switchToLogin}) => {
   };
 
   const isEmailValid = (email) => {
-    const emailRegex = /^[^\s@]+@(gmail\.com|yahoo\.com)$/i;
+    const emailRegex = /^[a-zA-Z]+(\.[a-zA-Z]+)*@swiftpark\.com$/;
     return emailRegex.test(email);
   };
-
+  
   const isPasswordValid = (password) => {
     const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
     return passwordRegex.test(password);
@@ -81,7 +81,7 @@ const AdminSign = ({switchToLogin}) => {
   const handleSignUp = async(event) => {
     event.preventDefault();
     try{
-      const response= await axios.post('http://localhost:5000/user/signup', {
+      const response= await axios.post('http://localhost:5000/admin/signup', {
          firstname:firstname, 
          lastname:lastname, 
          email:email, 
@@ -106,10 +106,10 @@ const AdminSign = ({switchToLogin}) => {
           return;
         }
          console.log(response.data);//response from the server
-         navigate("/login");
+         navigate("/adminlogin");
       }catch(err){
         if (err.response && err.response.status === 400) {
-          setErrorMessage(`User with email ${email} already exists`);
+          setErrorMessage('Only one admin is allowed');
           console.log(err.response.data.message);}
         else {
           setErrorMessage('An error occurred. Please try again later.');}
@@ -117,13 +117,16 @@ const AdminSign = ({switchToLogin}) => {
         finally {
           updateButtonState(email, password, errorMessage);}
         };
-        let imgsrc=require('../assets/logoPark.jpg')
   return (
     <form onSubmit={handleSignUp}>
     <div className="SignUpForm">
       <h2 style={{textAlign: 'center'}} className="app-title">SwiftPark</h2>
+      <h5 style={{textAlign: 'center'}} className="app-title">@admin</h5>
+      <div style={{display: 'flex'}}>
+        <Link to="/admin"><button style={{borderColor:'salmon'}} className="btn">ADMIN</button></Link>
+        <Link to="/signup"><button style={{borderColor:'salmon'}} className="btn">USER</button></Link>
+      </div>
       <div style={{marginTop:'30px'}} className="inputts">
-        <img style={{height:'70px', marginLeft:'150px', marginBottom:'50px', borderRadius:'10px'}} src={imgsrc} alt='logo'></img>
       </div>
       <input 
        type="text"
@@ -185,9 +188,6 @@ const AdminSign = ({switchToLogin}) => {
       </div><br></br>
 
       <div style={{ color: 'red', textAlign: 'center' }}>{errorMessage}</div>
-
-
-
 
 
       <Link

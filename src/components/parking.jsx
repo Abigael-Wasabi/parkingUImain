@@ -6,7 +6,7 @@ import axios from 'axios';
 import NavBar from '../layouts/navbar';
 import Footer from '../layouts/footer';
 import MpesaPaymentModal from './mpesa';
-import './booking.css';
+// import './booking.css';
 
 function Paking() {
   const [arrivalTime, setArrivalTime] = useState('');
@@ -21,6 +21,7 @@ function Paking() {
   const [isPaymentMade, setIsPaymentMade] = useState(false);
   const [calculatedAmount, setCalculatedAmount] = useState(0);
 
+  // eslint-disable-next-line no-unused-vars
   const openMpesaModal = (calculatedAmount) => {
     setCalculatedAmount(calculatedAmount);
     setShowMpesaModal(true);
@@ -90,9 +91,10 @@ function Paking() {
       const response = await axios.get('http://localhost:5000/park/allocateRandomSlot', {
         params: {
           carType: carType.trim(),
-        },
+        }, 
       });
       setAllocatedSlot(response.data.parkingSlot.parkingSlotNumber);
+      alert(`parking slot alocated:${response.data.parkingSlot.parkingSlotNumber}`);
       console.log(`parking slot alocated:${response.data.parkingSlot.parkingSlotNumber}`)
     } catch (error) {
       console.error('Error allocating slot:', error);

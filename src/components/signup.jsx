@@ -8,7 +8,7 @@ import NavB from '../layouts/navB';
 import Footer from '../layouts/footer';
 import axios from 'axios';
 import './signup.css';
-import '../assets/logoPark.jpg';
+// import '../assets/logoPark.jpg';
 
 const SignUpForm = ({switchToLogin}) => {
   const navigate = useNavigate();//Initialize useNavigate //navigate("/login")
@@ -125,13 +125,17 @@ const SignUpForm = ({switchToLogin}) => {
         finally {
           updateButtonState(email, password, errorMessage);}
         };
-        let imgsrc=require('../assets/logoPark.jpg')
+        // let imgsrc=require('../assets/logoPark.jpg')
   return (
     <form onSubmit={handleSignUp}>
     <div className="SignUpForm">
       <h2 style={{textAlign: 'center'}} className="app-title">SwiftPark</h2>
+      <div style={{display: 'flex'}}>
+        <Link to="/admin"><button style={{borderColor:'salmon'}} className="btn">ADMIN</button></Link>
+        <Link to="/signup"><button style={{borderColor:'salmon'}} className="btn">USER</button></Link>
+      </div>
       <div style={{marginTop:'30px'}} className="inputts">
-        <img style={{height:'70px', marginLeft:'150px', marginBottom:'50px', borderRadius:'10px'}} src={imgsrc} alt='logo'></img>
+        {/* <img style={{height:'70px', marginLeft:'150px', marginBottom:'50px', borderRadius:'10px'}} src={imgsrc} alt='logo'></img> */}
       </div>
       <input 
        type="text"

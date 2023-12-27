@@ -38,32 +38,30 @@ const LoginForm = () => {
     } else {
       setIsButtonDisabled(true);
     }
-  };
+  };  
 
   // login logic
   const handleLogin = async (event) => {
     event.preventDefault(); 
-    try {
+    try { 
       const response = await axios.post('http://localhost:5000/user/login', {
         email: email,
         password: password,
-      });
+      }); 
 
-      
       console.log('Response:', response.data);
 
       if (response.data.userData) {
         const { token } = response.data.userData;
 
-        Cookies.set('token', token);
+        Cookies.set('userData', token);
 
         setErrorMessage('');
         navigate('/dashboard');
-      }
+        alert(`Welcome ${email}`);
+      };
 
-    
-
-
+  
     } catch (err) {
       if (err.response && err.response.status === 404) {
         setErrorMessage('User not found.');

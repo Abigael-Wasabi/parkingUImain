@@ -1,12 +1,12 @@
 .LoginForm{
     margin: 0 auto;
-    width: 400px;
+    width: 600px;
     height: 500px;
     color: black;
     border: 1px solid #ccc;
     border-radius: 10px;
     box-shadow: 2px 2px 2px burlywood;
-    background-color:pink ;
+    background-color:rgba(128,128,128,0.8);
     /* justify-content: center; */
     /* align-items: center; */
   }

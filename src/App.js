@@ -19,7 +19,7 @@ import Fpassw from './pages/fp';
 import Resetp from './pages/resetp';
 
 
-function App() {
+function App() { 
 
   return (
     <div className="app-background">
@@ -31,10 +31,10 @@ function App() {
           <Route path="/admin" element={<Admin/>} />
           <Route path="/adminlogin" element={<AdminLogin/>} />
           <Route path="/adminsignup" element={<AdminSign/>} />
+          <Route path="/admindashboard" element={<Admindashboard/>}/>
           <Route path="/signup" element={<SignUpForm/>}/>
           <Route path="/login" element={<LoginForm/>}/>
           <Route path="/dashboard" element={<CompContainer/>}/>
-          <Route path="/admindashboard" element={<Admindashboard/>}/>
           <Route path="/booking" element={<Boking/>}/>
           <Route path="/parking" element={<Parking/>}/>
           <Route path="/profile" element={<Profile/>}/>

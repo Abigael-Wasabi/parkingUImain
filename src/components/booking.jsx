@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Modal } from 'react-bootstrap';
@@ -93,6 +94,7 @@ function Boking() {
         },
       });
       setAllocatedSlot(response.data.parkingSlot.parkingSlotNumber);
+      alert(`parking slot alocated:${response.data.parkingSlot.parkingSlotNumber}`);
       console.log(`parking slot alocated:${response.data.parkingSlot.parkingSlotNumber}`)
     } catch (error) {
       console.error('Error allocating slot:', error);
@@ -175,10 +177,11 @@ function Boking() {
       <button
         style={{ width: '100%', marginLeft: '0px' }}
         onClick={allocateSlot}
-        disabled={!allFieldsFilled || isPaymentMade}>Hold a Spot
+        disabled={!allFieldsFilled}>Hold a Spot
       </button>
 
       {allocatedSlot !== null && <h6 style={{ textAlign: 'center', fontSize: '16px', fontWeight: 'normal' }}>Allocated Slot: {allocatedSlot}</h6>}
+      
 
       <Modal show={showMpesaModal} onHide={closeMpesaModal}>
         <Modal.Header closeButton>

@@ -67,17 +67,21 @@ CONTAINS CSS FOR PAGES
   padding: 20px;
   border: 1px solid salmon;
   box-shadow: 2px 2px 4px burlywood;
-  height: 100px;
+  height: 200px;
+  width: 500px;
   margin-bottom:30px;
   background-color: gray;
 }
 
 .booking{
   background-color:#CEA492; 
+  border-radius: 15px;
 } 
 
 .parking{
   background-color: #76615A;
+  border-radius: 15px;
+
 }
 
 .request-ride{

@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 import Footer from '../layouts/footer';
 import axios from 'axios';
-import Cookies from 'js-cookie';
+// import Cookies from 'js-cookie';
 import NavB from '../layouts/navB';
 import './login.css';
 
@@ -50,18 +50,17 @@ const AdminLogin = () => {
 
       console.log('Response:', response.data);
 
-      if (response.data.userData) {
-        const { token } = response.data.userData;
+      // if (response.data.userData) {
+        // const { token } = response.data.userData;
 
-        Cookies.set('token', token);
+        // Cookies.set('userData', token);
 
-        setErrorMessage('');
+        // setErrorMessage('');
         navigate('/admindashboard');
-      }
-
+      // };
     } catch (err) {
       if (err.response && err.response.status === 404) {
-        setErrorMessage('Admin not found.');
+        setErrorMessage('Wrong admin');
       } else if (err.response && err.response.status === 401) {
         setErrorMessage('Incorrect password.');
       } else {
@@ -73,15 +72,12 @@ const AdminLogin = () => {
     }
   };
 
-  let imgsrc=require('../assets/logoPark.jpg')
-
-
   return (
     <div style={{ marginTop: '50px' }} className="LoginForm">
       <NavB/>
       <h2 style={{textAlign: 'center'}} className="app-title">SwiftPark</h2>
+      <h5 style={{textAlign: 'center'}} className="app-title">@admin</h5>
       <div style={{marginTop:'30px'}} className="inputts">
-        <img style={{height:'70px', marginLeft:'150px', marginBottom:'50px', borderRadius:'10px'}} src={imgsrc} alt='logo'></img>
       </div>
       <form onSubmit={handleLogin}>
         <label htmlFor="email">Email</label>

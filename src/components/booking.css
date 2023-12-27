@@ -31,9 +31,8 @@
   }
 
   .admin{
+    margin-top: 76px;
     border: 1px solid gray;
     border-radius: 10px;
-    height: 800px;
     background-color: rgba(250, 128, 114, 0.5);
-
   }
