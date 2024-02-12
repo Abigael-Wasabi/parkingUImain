@@ -9,6 +9,7 @@ import Footer from '../layouts/footer';
 import axios from 'axios';
 import './signup.css';
 // import '../assets/logoPark.jpg';
+import { Row,Col } from 'react-bootstrap';
 
 const SignUpForm = ({switchToLogin}) => {
   const navigate = useNavigate();//Initialize useNavigate //navigate("/login")
@@ -127,12 +128,17 @@ const SignUpForm = ({switchToLogin}) => {
         };
         // let imgsrc=require('../assets/logoPark.jpg')
   return (
+    <>
+    <Row><NavB/></Row>
+    <Row>
+      <Col>y</Col>
+      <Col></Col>
     <form onSubmit={handleSignUp}>
     <div className="SignUpForm">
       <h2 style={{textAlign: 'center'}} className="app-title">SwiftPark</h2>
       <div style={{display: 'flex'}}>
-        <Link to="/admin"><button style={{borderColor:'salmon'}} className="btn">ADMIN</button></Link>
-        <Link to="/signup"><button style={{borderColor:'salmon'}} className="btn">USER</button></Link>
+        <Link to="/admin"><button style={{backgroundColor:'#daf3ef',  width:'80px'}}>ADMIN</button></Link>
+        <Link to="/signup"><button style={{backgroundColor:'#daf3ef', width:'80px', marginLeft:'10px'}}>USER</button></Link>
       </div>
       <div style={{marginTop:'30px'}} className="inputts">
         {/* <img style={{height:'70px', marginLeft:'150px', marginBottom:'50px', borderRadius:'10px'}} src={imgsrc} alt='logo'></img> */}
@@ -195,12 +201,12 @@ const SignUpForm = ({switchToLogin}) => {
          onClick={toggleConfirmPasswordVisibility} />
        </div>
       </div><br></br>
-      <p style={{color:'gray'}}>Please choose a secure password (at least 8 characters)</p>
+      <p style={{color:'#25666a'}}>Password to meet complexity requirements</p>
 
       <div style={{ color: 'red', textAlign: 'center' }}>{errorMessage}</div>
 
       <span onClick={toggleModal} style={{marginLeft:'125px', cursor:'pointer'}}>Terms & Conditions</span>
-      {showModal && <Tnc showModal={showModal} closeModal={closeModal} />}
+      {showModal && <Tnc showModal={showModal} closeModal={closeModal} />}<br></br>
 
 
 
@@ -224,14 +230,18 @@ const SignUpForm = ({switchToLogin}) => {
           onClick={handleSignUp}>Sign Up</button>
       </Link>
 
-      <p className="signup-link">
+      <p className="login-link">
         <Link style={{textDecoration:'none', color:'black'}} to="/login"
         onClick={switchToLogin}>I'm a member.Login</Link>
       </p>
     </div>
-    <NavB/>
-    <div className=" d-flex justify-content-center"><Footer/></div>
     </form>
+    </Row>
+
+    <Row>
+      <div className=" d-flex justify-content-center"><Footer/></div>
+    </Row>
+    </>
   );
 };
 

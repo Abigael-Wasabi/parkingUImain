@@ -8,13 +8,13 @@ CONTAINS CSS FOR SIGN UP FORM
 
 .SignUpForm{
     margin: 0 auto;
-    width: 600px;
-    height: 700px;
+    width: 400px;
+    /* height: 700px; */
     color: rgb(0, 0, 0);
     border: 1px solid #ccc;
     border-radius: 10px;
-    box-shadow: 2px 2px 2px burlywood;
-    background-color: rgba(128,128,128,0.8);
+    box-shadow: 2px 2px 200px #25666a;
+    background-color: rgb(218,243,239,0.5);
   }
   
   input{ 
@@ -61,3 +61,6 @@ CONTAINS CSS FOR SIGN UP FORM
     transform: translateY(-50%);
     cursor: pointer;
   } 
+  span{
+    text-align: center;
+  }

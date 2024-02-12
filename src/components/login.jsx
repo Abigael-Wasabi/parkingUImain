@@ -7,16 +7,24 @@ import { Link } from 'react-router-dom';
 import Footer from '../layouts/footer';
 import axios from 'axios';
 import Cookies from 'js-cookie';
+import Tnc from '../layouts/t&c';
 import NavB from '../layouts/navB';
 import './login.css';
 
-const LoginForm = () => {
+const LoginForm = ({switchToSignup}) => {
   const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [passwordVisible, setPasswordVisible] = useState(false);
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
   const [errorMessage, setErrorMessage] = useState('');
+  const [showModal, setShowModal] = useState(false);
+  const toggleModal =  () => {
+    setShowModal(!showModal);
+  }
+  const closeModal = () => {
+    setShowModal(false);
+  };
 
   const handleEmailChange = (event) => {
     setEmail(event.target.value);
@@ -76,15 +84,17 @@ const LoginForm = () => {
     }
   };
 
-  let imgsrc=require('../assets/logoPark.jpg')
+  // let imgsrc=require('../assets/logoPark.jpg')
 
 
   return (
-    <div style={{ marginTop: '50px' }} className="LoginForm">
+    <div style={{ marginTop: '50px', width:'400px' }} className="LoginForm">
       <NavB/>
       <h2 style={{textAlign: 'center'}} className="app-title">SwiftPark</h2>
-      <div style={{marginTop:'30px'}} className="inputts">
-        <img style={{height:'70px', marginLeft:'150px', marginBottom:'50px', borderRadius:'10px'}} src={imgsrc} alt='logo'></img>
+      
+      <div style={{display: 'flex'}}>
+        <Link to="/admin"><button style={{backgroundColor:'#daf3ef',  width:'80px'}}>ADMIN</button></Link>
+        <Link to="/signup"><button style={{backgroundColor:'#daf3ef', width:'80px', marginLeft:'10px'}}>USER</button></Link>
       </div>
       <form onSubmit={handleLogin}>
         <label htmlFor="email">Email</label>
@@ -111,11 +121,18 @@ const LoginForm = () => {
              onClick={togglePasswordVisibility} />
         </div>
         </div><br></br>
+      <p style={{color:'#25666a'}}>Password to meet complexity requirements</p>
         <div style={{ color: 'red', textAlign: 'center' }}>{errorMessage}</div>
         <div style={{ textAlign: 'center', }} className="forgot-password">
           <Link style={{ textDecoration: 'none', color: 'black' }} to="/forgot-password">Forgot Password?</Link>
         </div>
+        <span onClick={toggleModal} style={{marginLeft:'125px', cursor:'pointer'}}>Terms & Conditions</span>
+      {showModal && <Tnc showModal={showModal} closeModal={closeModal} />}<br></br>
         <button type="submit" disabled={isButtonDisabled}>Login</button>
+        <p className="signup-link">
+        <Link style={{textDecoration:'none', color:'black'}} to="/signup"
+        onClick={switchToSignup}>I'm new. Signup</Link>
+      </p>
       </form>
     <div className=" d-flex justify-content-center"><Footer/></div>
     </div>

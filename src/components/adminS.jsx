@@ -123,8 +123,8 @@ const AdminSign = ({switchToLogin}) => {
       <h2 style={{textAlign: 'center'}} className="app-title">SwiftPark</h2>
       <h5 style={{textAlign: 'center'}} className="app-title">@admin</h5>
       <div style={{display: 'flex'}}>
-        <Link to="/admin"><button style={{borderColor:'salmon'}} className="btn">ADMIN</button></Link>
-        <Link to="/signup"><button style={{borderColor:'salmon'}} className="btn">USER</button></Link>
+        <Link to="/admin"><button style={{backgroundColor:'#daf3ef',  width:'80px'}}>ADMIN</button></Link>
+        <Link to="/signup"><button style={{backgroundColor:'#daf3ef',  width:'80px', marginLeft:'10px'}}>USER</button></Link>
       </div>
       <div style={{marginTop:'30px'}} className="inputts">
       </div>
@@ -221,3 +221,41 @@ const AdminSign = ({switchToLogin}) => {
 };
 
 export default AdminSign;
+
+
+
+
+
+// import React from 'react'
+
+// const Services = () => {
+//   return (
+//     <div className="bg-purple-f">
+//     <h2 className="text-black-a text-3xl font-bold text-center p-4 pt-10">Services we offer</h2>
+//     <div className="flex justify-center px-8 pt-4">
+//       {servicesData.map((service, index) => (
+//         <div className="flex-1 p-4 text-center" key={index}>
+//           <div className="bg-white-a rounded-lg p-4 h-full w-25 flex flex-col justify-between shadow-lg">
+//             <div className="bg-purple-dark-hover rounded-full w-20 h-20 mx-auto mb-4 flex items-center justify-center" style={{ paddingTop: '12px' }}>
+//               <img src={service.icon} alt={service.title} className="w-8 h-8" />
+//             </div>
+//             <div>
+//               <h3 className="text-purple-normal-active  font-bold mb-2">{service.title}</h3>
+//               <p className="text-black-a">{service.description}</p>
+//             </div>
+//           </div>
+//         </div>
+//       ))}
+//     </div>
+//     <div className="text-center font-bold h-20">
+//       <SingleClick buttonClass="1" buttonText="See More" buttonType='button'/>
+//     </div>
+//   </div>
+// );
+// };
+
+// export default Services;
+
+
+
+

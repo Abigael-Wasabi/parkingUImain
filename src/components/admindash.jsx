@@ -77,7 +77,7 @@ function AdminDashboard() {
         <NavB/>
         <Table bordered striped responsive>
         <th colSpan='3' className='text-center'>
-          <button onClick={checkUsers} style={{backgroundColor: 'salmon'}}>Check users details</button></th>
+          <button onClick={checkUsers} style={{backgroundColor: '#25666a'}}>Check users details</button></th>
           <tr>
             <th>userID</th>
             <th>firstname</th>
@@ -98,7 +98,7 @@ function AdminDashboard() {
 
           <Table bordered striped responsive>
         <th colSpan='3' className='text-center'>
-          <button onClick={checkSlots} style={{backgroundColor: 'salmon'}}>Check slots details</button></th>
+          <button onClick={checkSlots} style={{backgroundColor: '#25666a'}}>Check slots details</button></th>
           <tr>
             <th>slotID</th>
             <th>Slot Number</th>
@@ -117,7 +117,7 @@ function AdminDashboard() {
 
         <Table bordered striped responsive>
         <th colSpan='4' className='text-center'>
-          <button onClick={checkCars} style={{backgroundColor: 'salmon'}}>Check cars details</button></th>
+          <button onClick={checkCars} style={{backgroundColor: '#25666a'}}>Check cars details</button></th>
           <tr>
             <th>carID</th>
             <th>arrival time</th>

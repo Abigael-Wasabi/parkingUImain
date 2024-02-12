@@ -63,25 +63,23 @@ CONTAINS CSS FOR PAGES
   /* margin: 0 auto; */
 }
 
-.booking, .parking, .request-ride {
+.booking, .parking {
   padding: 20px;
-  border: 1px solid salmon;
-  box-shadow: 2px 2px 4px burlywood;
   height: 200px;
   width: 500px;
   margin-bottom:30px;
-  background-color: gray;
 }
 
 .booking{
-  background-color:#CEA492; 
-  border-radius: 15px;
+  background-color:#daf3ef; 
+  border: 1px solid #25666a ;
+  box-shadow: 2px 2px 200px #25666a;
 } 
 
 .parking{
-  background-color: #76615A;
-  border-radius: 15px;
-
+  background-color: rgb(37,102,106);
+  border: 1px solid #daf3ef ;
+  box-shadow: 2px 2px 200px #daf3ef;
 }
 
 .request-ride{
@@ -101,4 +99,5 @@ CONTAINS CSS FOR PAGES
   position: fixed;
   bottom: 0;
   width: 100%;
+  left: 0;
 }

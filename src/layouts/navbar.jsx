@@ -21,7 +21,7 @@ const NavBar =()=>{
     setShowCModal(false);
   };
     return (
-    <Navbar bg="dark" variant="dark" fixed="top" expand="lg">
+    <Navbar style={{backgroundColor: '#25666A'}} fixed="top" expand="lg">
       <Navbar.Brand>SwiftPark</Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">

@@ -9,7 +9,7 @@ import axios from 'axios';
 import NavB from '../layouts/navB';
 import './login.css';
 
-const AdminLogin = () => {
+const AdminLogin = ({switchToSignUp}) => {
   const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -73,11 +73,15 @@ const AdminLogin = () => {
   };
 
   return (
-    <div style={{ marginTop: '50px' }} className="LoginForm">
+    <div style={{ marginTop: '50px',width: "400px"}} className="LoginForm" >
       <NavB/>
       <h2 style={{textAlign: 'center'}} className="app-title">SwiftPark</h2>
       <h5 style={{textAlign: 'center'}} className="app-title">@admin</h5>
-      <div style={{marginTop:'30px'}} className="inputts">
+      {/* <div style={{marginTop:'30px'}} className="inputts">
+      </div> */}
+      <div style={{display: 'flex'}}>
+        <Link to="/admin"><button style={{backgroundColor:'#daf3ef',  width:'80px'}}>ADMIN</button></Link>
+        <Link to="/signup"><button style={{backgroundColor:'#daf3ef',  width:'80px', marginLeft:'10px'}}>USER</button></Link>
       </div>
       <form onSubmit={handleLogin}>
         <label htmlFor="email">Email</label>
@@ -110,6 +114,10 @@ const AdminLogin = () => {
         </div>
         <Link to="/admindashboard">
         <button type="submit" disabled={isButtonDisabled}>Login</button></Link>
+        <p className="signup-link">
+        <Link style={{textDecoration:'none', color:'black'}} to="/adminsignup"
+        onClick={switchToSignUp}>Signup</Link>
+      </p>
       </form>
     <div className=" d-flex justify-content-center"><Footer/></div>
     </div>
