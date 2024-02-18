@@ -8,8 +8,7 @@ import NavB from '../layouts/navB';
 import Footer from '../layouts/footer';
 import axios from 'axios';
 import './signup.css';
-// import '../assets/logoPark.jpg';
-import { Row,Col } from 'react-bootstrap';
+import {Row} from 'react-bootstrap';
 
 const SignUpForm = ({switchToLogin}) => {
   const navigate = useNavigate();//Initialize useNavigate //navigate("/login")
@@ -128,11 +127,9 @@ const SignUpForm = ({switchToLogin}) => {
         };
         // let imgsrc=require('../assets/logoPark.jpg')
   return (
-    <>
+    <div>
     <Row><NavB/></Row>
     <Row>
-      <Col>y</Col>
-      <Col></Col>
     <form onSubmit={handleSignUp}>
     <div className="SignUpForm">
       <h2 style={{textAlign: 'center'}} className="app-title">SwiftPark</h2>
@@ -241,7 +238,7 @@ const SignUpForm = ({switchToLogin}) => {
     <Row>
       <div className=" d-flex justify-content-center"><Footer/></div>
     </Row>
-    </>
+    </div>
   );
 };
 

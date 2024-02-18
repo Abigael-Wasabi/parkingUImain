@@ -6,6 +6,7 @@ import axios from 'axios';
 import NavBar from '../layouts/navbar';
 import Footer from '../layouts/footer';
 import MpesaPaymentModal from './mpesa';
+import { Col } from 'react-bootstrap';
 import './booking.css';
 
 function Boking() {
@@ -125,10 +126,11 @@ function Boking() {
   };
 
   return (
-    <div className='container boking'>
+    <div className='container'>
       <div className='row'>
       <NavBar/>
      <div className=" d-flex justify-content-center"><Footer/></div>
+     <div className="boking">
       <h3 style={{ textAlign: 'center', fontSize: '15px' }}>seamless parking solutions, reserve your spot today</h3>
 
       <label>Arrival Time</label><br />
@@ -195,8 +197,34 @@ function Boking() {
         </Modal.Body>
       </Modal>
 
-      </div>
+    
+      
     </div>
+    <Col style={{backgroundColor:'rgb(37,102,106,0.5)'}}>
+    <h1 style={{textAlign: 'center'}}>SWIFTPARK</h1>
+    <h5 style={{textAlign: 'center'}}>SwiftPark brings fast and efficient service with a friendly smile to the 
+      City. Located along Muindi Street. – off Kenyatta Avenue, near the Kenyatta 
+      International Airport. The facility offers free car-to-terminal shuttle 
+      service, complimentary luggage assistance, contactless payment, and more. 
+      Equipped with a geo-thermal heating system, this SwiftPark facility is doing 
+      its part to promote the city’s environmental goals.</h5>
+      <div style={{textAlign: 'center'}}>
+      <u><h4 style={{textAlign: 'center'}}>What Sets Us Apart</h4></u>
+      <li>Efficient Payment Systems</li>
+      <li>Real-Time Parking Information</li>
+      <li>Seamless Transportation Services</li>
+      </div>
+      <u><h4 style={{textAlign: 'center'}}>Terms and Conditions</h4></u>
+    <h5 style={{textAlign: 'center'}}>You must login to your SwiftPark account during reservation to 
+      receive the lower rate. Discounted rates and promotions do not 
+      apply to days stayed beyond your reservation. Reservations must 
+      be modified or canceled within 4 hours of start time. Rates subject 
+      to change without notice. SwiftPark rates and fees are charged on 
+      a daily basis. Taxes and/or fees may apply. Your credit card will 
+      be charged in full when you confirm your reservation</h5>
+  </Col>
+  </div>
+  </div>
   );
 }
 

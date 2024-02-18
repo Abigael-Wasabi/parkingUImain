@@ -9,6 +9,11 @@ const Footer = () => {
   return (
     <div className="nb footer">
       <Row>
+        <Row style={{marginTop: '10px'}}>  
+          <Col><label>SUBSCRIBE TO RECEIVE EXCLUSIVE NEWS</label></Col>
+          <Col><input placeholder="Email"></input></Col>
+          <Col><button>SUBSCRIBE</button></Col>
+        </Row>
         <Row>
           <Col>
       <h2>PARKING</h2>

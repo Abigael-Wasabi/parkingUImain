@@ -19,7 +19,7 @@ function About() {
 <div className='row'>
 
 <div className='col-md-6'>
-<h5 style={{textAlign:'center'}}>About Us</h5>
+<h5 style={{textAlign:'center',color:'salmon'}}>About Us</h5>
 <h6 className="paragraph">Welcome to SwiftPark, where innovation meets convenience in the realm of parking solutions.
 We understand that parking is an integral component of urban infrastructure.</h6>
 </div>
@@ -36,7 +36,7 @@ We understand that parking is an integral component of urban infrastructure.</h6
 <div className='col-md-6'></div>
 
 <div className='col-md-6'>
-<h5 style={{textAlign:'center'}}>Our Mission</h5>
+<h5 style={{textAlign:'center', color:'salmon'}}>Our Mission</h5>
 <h6 className="paragraph">At SwiftPark, our mission is to revolutionize the parking experience by addressing the
 challenges faced by parking areas.</h6>
 </div>
@@ -46,7 +46,7 @@ challenges faced by parking areas.</h6>
 
 <div className='row'>
 <div className='col-md-6'>
-<h5 style={{textAlign:'center'}}>What Sets Us Apart</h5>
+<h5 style={{textAlign:'center',color:'salmon'}}>What Sets Us Apart</h5>
 <h6 className="paragraph">
 <li>Efficient Payment Systems: Say goodbye to long queues and delays. We have implemented
 a state-of-the-art online payment system.</li></h6>
@@ -69,7 +69,7 @@ experience. </li></h6>
 <div className='row'>
 <div className='col-md-6'></div>
 <div className='col-md-6'>
-<h5 style={{textAlign:'center'}}>Why Choose Us?</h5>
+<h5 style={{textAlign:'center',color:'salmon'}}>Why Choose Us?</h5>
 <h6 className="paragraph">At SwiftPark, we prioritize customer satisfaction. We value your feedback and are 
 continuously working to enhance our services.</h6><br></br>
 <br/>
